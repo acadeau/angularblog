@@ -1,6 +1,18 @@
-<div>
-  <h1>{{post.title}}</h1>
-  <p>{{post.body}}</p>
-  <hr>
-  <div ui-view="comments"></div>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1 class="text-primary">{{post.title}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p>{{post.body}}</p>
+        <hr>
+        <div ui-view="comments"></div>
+    </div>
 </div>

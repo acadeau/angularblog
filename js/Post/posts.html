@@ -1,6 +1,8 @@
-<div>
-  <div ng-repeat="post in posts">
-    <h1><a href="#" ng-click="goToPostDetails(post.id)">{{post.title}}</a></h1>
-    <p>{{post.body}}</p>
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="post-preview" ng-repeat="post in posts">
+      <a href="#" ng-click="goToPostDetails(post.id)"><h2 class="post-title">{{post.title}}</h1></a>
+      <h3 class="post-subtitle">{{post.body}}</h3>
+    </div>
   </div>
 </div>
