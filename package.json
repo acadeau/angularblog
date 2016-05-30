@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build-copy-file": "/bin/cp -f static/index.html dist/index.html",
-    "build": "browserify webapp/js/app.js -o webapp/dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d",
-    "watch": "watchify webapp/js/app.js -o webapp/dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d"
+    "build": "browserify js/app.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d",
+    "watch": "watchify js/app.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d",
+    "serve": "http-server ./"
   },
   "author": "Alexandre Cadeau",
   "license": "ISC",
@@ -20,6 +21,7 @@
     "babelify": "~7.3.0",
     "browserify": "~13.0.1",
     "firebase-tools": "^3.0.1",
+    "http-server": "^0.9.0",
     "watchify": "~3.7.0"
   }
 }
