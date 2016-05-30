@@ -8,15 +8,14 @@ angular.module('blog')
       getPosts: function(){
         return posts.getList();
       },
-      newPosts: function(roomData, files){
-        file = files[0]
-        return rooms.post(roomData);
+      newPosts: function(postData){
+        return posts.post(postData);
       },
-      getPost: function(uid){
-        return Restangular.one('post', uid).get();
+      getPost: function(id){
+        return Restangular.one('posts', id);
       },
-      updatePost: function(roomData, uid){
-       return this.getRoom(uid).then(room => {
+      updatePost: function(postData, id){
+       return this.getPost(uid).get().then(room => {
          _.merge(room[0], roomData);
          room[0].put();
        })
