@@ -9,4 +9,5 @@ The template is "clean blog" from [StartBootsrap](http://startbootstrap.com/temp
 
 ## How to run 
 First install dependencies : `npm install` 
+
 Next run serve : `npm run serve`
