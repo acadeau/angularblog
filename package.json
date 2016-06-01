@@ -7,7 +7,7 @@
     "build-copy-file": "/bin/cp -f static/index.html dist/index.html",
     "build": "browserify js/app.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d",
     "watch": "watchify js/app.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ] -d",
-    "serve": "npm run watch && http-server ./"
+    "serve": "npm run build && http-server ./"
   },
   "author": "Alexandre Cadeau",
   "license": "ISC",
